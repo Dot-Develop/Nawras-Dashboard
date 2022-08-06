@@ -544,14 +544,13 @@ class _AddItemTabState extends State<AddItemTab> {
             SizedBox(
               width: 20.0,
             ),
-            RaisedButton(
+            OutlinedButton(
               onPressed: () => _selectDate(context), // Refer step 3
               child: Text(
                 'Select date',
                 style:
                     TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
               ),
-              color: Colors.greenAccent,
             ),
           ],
         ),

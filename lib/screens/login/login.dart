@@ -42,16 +42,17 @@ class _LoginState extends State<Login> {
     );
 
     final loginButton = Container(
+      color: PaletteColors.mainAppColor,
       width: MediaQuery.of(context).size.width / 2.5,
-      child: RaisedButton(
+      child: OutlinedButton(
         onPressed: () {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) => HomeScreen()),
           );
         },
-        padding: EdgeInsets.all(12),
-        color: PaletteColors.mainAppColor,
+//        padding: EdgeInsets.all(12),
+//        color: PaletteColors.mainAppColor,
         child: Text('Log In',
             style: TextStyle(
                 fontSize: 16,
@@ -60,7 +61,7 @@ class _LoginState extends State<Login> {
       ),
     );
 
-    final forgotLabel = FlatButton(
+    final forgotLabel = OutlinedButton(
       child: Text(
         'Forgot password?',
         style: TextStyle(color: Colors.black54),

@@ -185,12 +185,13 @@ class _ReviewHomeTabState extends State<ReviewHomeTab> {
                                       .passions[User.PassionCooking] = val);
                                 }),
                             Container(
+                                color: PaletteColors.mainAppColor,
                                 height: 80,
                                 // margin: EdgeInsets.only(left: 200, right: 200),
                                 padding: const EdgeInsets.symmetric(
                                     vertical: 16.0, horizontal: 16.0),
-                                child: RaisedButton(
-                                    color: PaletteColors.mainAppColor,
+                                child: OutlinedButton(
+                                    // color: PaletteColors.mainAppColor,
                                     onPressed: () {
                                       if (_formKey.currentState.validate()) {
                                         _formKey.currentState.save();
@@ -216,7 +217,7 @@ class _ReviewHomeTabState extends State<ReviewHomeTab> {
   }
 
   _showDialog(BuildContext context) {
-    Scaffold.of(context)
-        .showSnackBar(SnackBar(content: Text('Submitting form')));
+//    Scaffold.of(context)
+//        .showSnackBar(SnackBar(content: Text('Submitting form')));
   }
 }

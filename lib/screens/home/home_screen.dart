@@ -199,28 +199,31 @@ class HomeScreenState extends State<HomeScreen>
 
   Widget dashboardTabsFlatButton(
       String label, IconData icon, int index, bool drawerStatus) {
-    return FlatButton(
+    return Container(
       color: tabController.index == index ? Colors.grey[100] : Colors.white,
-      onPressed: () {
-        tabController.animateTo(index);
-        drawerStatus ? Navigator.pop(context) : print("");
-      },
-      child: Align(
-        alignment: Alignment.centerLeft,
-        child: Container(
-          padding: EdgeInsets.only(top: 22, bottom: 22, right: 22),
-          child: Row(children: [
-            Icon(icon),
-            SizedBox(
-              width: 8,
-            ),
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: 18,
+      child: OutlinedButton(
+//      color: tabController.index == index ? Colors.grey[100] : Colors.white,
+        onPressed: () {
+          tabController.animateTo(index);
+          drawerStatus ? Navigator.pop(context) : print("");
+        },
+        child: Align(
+          alignment: Alignment.centerLeft,
+          child: Container(
+            padding: EdgeInsets.only(top: 22, bottom: 22, right: 22),
+            child: Row(children: [
+              Icon(icon),
+              SizedBox(
+                width: 8,
               ),
-            ),
-          ]),
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 18,
+                ),
+              ),
+            ]),
+          ),
         ),
       ),
     );
