@@ -12,7 +12,7 @@ class SalePersonTab extends StatelessWidget {
           elevation: 2.0,
           child: Container(
             child: PhotoHero(
-              photo: 'ironman.png',
+              photo: 'nawraslogo.jpeg',
               width: 300.0,
               onTap: () {
                 Navigator.of(context).push(
@@ -43,7 +43,7 @@ class SalePersonTab extends StatelessWidget {
                                 left: MediaQuery.of(context).size.width / 4.5,
                                 bottom: 200),
                             child: PhotoHero(
-                              photo: 'ironman.png',
+                              photo: 'nawraslogo.jpeg',
                               width: MediaQuery.of(context).size.width / 4,
                               onTap: () {
                                 Navigator.of(context).pop();

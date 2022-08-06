@@ -150,592 +150,589 @@ class _AddItemTabState extends State<AddItemTab> {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Item Name in Kurdish",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
+    return Column(
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Item Name in Kurdish",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                      ),
+                      controller: itemNameKr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      minLines: 4,
+                      maxLines: 8,
+                      decoration: InputDecoration(
+                        labelText: "Item Description in Kurdish",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
                         ),
-                        controller: itemNameKr,
                       ),
-                      SizedBox(
-                        height: 10,
+                      controller: descNameKr,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Item Name in English",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
                       ),
-                      TextField(
-                        minLines: 4,
-                        maxLines: 8,
-                        decoration: InputDecoration(
-                          labelText: "Item Description in Kurdish",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
+                      controller: itemNameEn,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      minLines: 4,
+                      maxLines: 8,
+                      decoration: InputDecoration(
+                        labelText: "Item Description in English",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
                         ),
-                        controller: descNameKr,
                       ),
-                      SizedBox(
-                        height: 20,
+                      controller: descNameEn,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Item Name in Arabic",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Item Name in English",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
+                      controller: itemNameAr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      minLines: 4,
+                      maxLines: 8,
+                      decoration: InputDecoration(
+                        labelText: "Item Description in Arabic",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
                         ),
-                        controller: itemNameEn,
                       ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        minLines: 4,
-                        maxLines: 8,
-                        decoration: InputDecoration(
-                          labelText: "Item Description in English",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: descNameEn,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Item Name in Arabic",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                        ),
-                        controller: itemNameAr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        minLines: 4,
-                        maxLines: 8,
-                        decoration: InputDecoration(
-                          labelText: "Item Description in Arabic",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: descNameAr,
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                    ],
-                  ),
+                      controller: descNameAr,
+                    ),
+                    SizedBox(
+                      height: 30,
+                    ),
+                  ],
                 ),
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: 10,
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(12.0),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        RoundedButton(
+                            title: "Upload Pic",
+                            isThikHeight: true,
+                            onPressed: () {}),
+//                        Image.network(
+//                          "https://icons-for-free.com/iconfiles/png/512/box+document+outline+share+top+upload+icon-1320195323221671611.png",
+//                          height: 50,
+//                          width: 80,
+//                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Store Code",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          RoundedButton(
-                              title: "Upload Pic",
-                              isThikHeight: true,
-                              onPressed: () {}),
-                          Image.network(
-                            "https://icons-for-free.com/iconfiles/png/512/box+document+outline+share+top+upload+icon-1320195323221671611.png",
-                            height: 50,
-                            width: 80,
-                          )
-                        ],
+                      controller: itemNameKr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Name of Pechanawa",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
                       ),
-                      SizedBox(
-                        height: 10,
+                      controller: itemNameEn,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "One Weight",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
                       ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Store Code",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
+                      controller: itemNameEn,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Parcha Weight",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                      ),
+                      controller: itemNameEn,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "Type of Pechawana :",
+                          style: AppTextStyle.boldTitle18
+                              .copyWith(color: PaletteColors.blackAppColor),
                         ),
-                        controller: itemNameKr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Name of Pechanawa",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                        ),
-                        controller: itemNameEn,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "One Weight",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                        ),
-                        controller: itemNameEn,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Parcha Weight",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                        ),
-                        controller: itemNameEn,
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        children: [
-                          Text(
-                            "Type of Pechawana :",
-                            style: AppTextStyle.boldTitle18
-                                .copyWith(color: PaletteColors.blackAppColor),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: DropdownButton<String>(
-                              value: familyItemList[0],
-                              icon: Icon(Icons.arrow_downward),
-                              iconSize: 24,
-                              elevation: 16,
-                              style: TextStyle(
-                                  color: PaletteColors.darkRedColorApp),
-                              underline: Container(
-                                height: 1,
-                                color: PaletteColors.blackAppColor,
-                              ),
-                              onChanged: (String newValue) {
-                                setState(() {
-                                  itemFamily = newValue;
-                                });
-                              },
-                              items: familyItemList
-                                  .map<DropdownMenuItem<String>>(
-                                      (String value) {
-                                return DropdownMenuItem<String>(
-                                  value: value,
-                                  child: Text(value),
-                                );
-                              }).toList(),
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: DropdownButton<String>(
+                            value: familyItemList[0],
+                            icon: Icon(Icons.arrow_downward),
+                            iconSize: 24,
+                            elevation: 16,
+                            style:
+                                TextStyle(color: PaletteColors.darkRedColorApp),
+                            underline: Container(
+                              height: 1,
+                              color: PaletteColors.blackAppColor,
                             ),
+                            onChanged: (String newValue) {
+                              setState(() {
+                                itemFamily = newValue;
+                              });
+                            },
+                            items: familyItemList
+                                .map<DropdownMenuItem<String>>((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 30,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Bar Code",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
                         ),
-                        controller: itemNameKr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Family Item",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                        ),
-                        controller: itemNameKr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: "Bar Code",
-                labelStyle: TextStyle(color: PaletteColors.blackAppColor),
-              ),
-              controller: itemNameKr,
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: "Family Item",
-                labelStyle: TextStyle(color: PaletteColors.blackAppColor),
-              ),
-              controller: itemNameKr,
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: TextField(
-              decoration: InputDecoration(
-                labelText: "Pechawanawa Bar Code",
-                labelStyle: TextStyle(color: PaletteColors.blackAppColor),
-              ),
-              controller: itemNameKr,
-            ),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Row(
-              children: [
-                Text(
-                  "Main Hawpol :",
-                  style: AppTextStyle.boldTitle18
-                      .copyWith(color: PaletteColors.blackAppColor),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: DropdownButton<String>(
-                    value: familyItemList[0],
-                    icon: Icon(Icons.arrow_downward),
-                    iconSize: 24,
-                    elevation: 16,
-                    style: TextStyle(color: PaletteColors.darkRedColorApp),
-                    underline: Container(
-                      height: 1,
-                      color: PaletteColors.blackAppColor,
+                      ],
                     ),
-                    onChanged: (String newValue) {
-                      setState(() {
-                        itemFamily = newValue;
-                      });
-                    },
-                    items: familyItemList
-                        .map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Secondary Hawpol :",
-                  style: AppTextStyle.boldTitle18
-                      .copyWith(color: PaletteColors.blackAppColor),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: DropdownButton<String>(
-                    value: familyItemList[0],
-                    icon: Icon(Icons.arrow_downward),
-                    iconSize: 24,
-                    elevation: 16,
-                    style: TextStyle(color: PaletteColors.darkRedColorApp),
-                    underline: Container(
-                      height: 1,
-                      color: PaletteColors.blackAppColor,
+                    SizedBox(
+                      height: 30,
                     ),
-                    onChanged: (String newValue) {
-                      setState(() {
-                        itemFamily = newValue;
-                      });
-                    },
-                    items: familyItemList
-                        .map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  "Brand :",
-                  style: AppTextStyle.boldTitle18
-                      .copyWith(color: PaletteColors.blackAppColor),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: DropdownButton<String>(
-                    value: familyItemList[0],
-                    icon: Icon(Icons.arrow_downward),
-                    iconSize: 24,
-                    elevation: 16,
-                    style: TextStyle(color: PaletteColors.darkRedColorApp),
-                    underline: Container(
-                      height: 1,
-                      color: PaletteColors.blackAppColor,
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Bar Code",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                      ),
+                      controller: itemNameKr,
                     ),
-                    onChanged: (String newValue) {
-                      setState(() {
-                        itemFamily = newValue;
-                      });
-                    },
-                    items: familyItemList
-                        .map<DropdownMenuItem<String>>((String value) {
-                      return DropdownMenuItem<String>(
-                        value: value,
-                        child: Text(value),
-                      );
-                    }).toList(),
-                  ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Family Item",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                      ),
+                      controller: itemNameKr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
+          ],
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: "Bar Code",
+              labelStyle: TextStyle(color: PaletteColors.blackAppColor),
+            ),
+            controller: itemNameKr,
           ),
-          SizedBox(
-            height: 20,
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: "Family Item",
+              labelStyle: TextStyle(color: PaletteColors.blackAppColor),
+            ),
+            controller: itemNameKr,
           ),
-          Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: TextField(
+            decoration: InputDecoration(
+              labelText: "Pechawanawa Bar Code",
+              labelStyle: TextStyle(color: PaletteColors.blackAppColor),
+            ),
+            controller: itemNameKr,
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: Row(
+            children: [
               Text(
-                "${selectedDate.toLocal()}".split(' ')[0],
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                "Main Hawpol :",
+                style: AppTextStyle.boldTitle18
+                    .copyWith(color: PaletteColors.blackAppColor),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DropdownButton<String>(
+                  value: familyItemList[0],
+                  icon: Icon(Icons.arrow_downward),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: TextStyle(color: PaletteColors.darkRedColorApp),
+                  underline: Container(
+                    height: 1,
+                    color: PaletteColors.blackAppColor,
+                  ),
+                  onChanged: (String newValue) {
+                    setState(() {
+                      itemFamily = newValue;
+                    });
+                  },
+                  items: familyItemList
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
+                ),
               ),
               SizedBox(
-                width: 20.0,
+                width: 10,
               ),
-              RaisedButton(
-                onPressed: () => _selectDate(context), // Refer step 3
-                child: Text(
-                  'Select date',
-                  style: TextStyle(
-                      color: Colors.black, fontWeight: FontWeight.bold),
-                ),
-                color: Colors.greenAccent,
+              Text(
+                "Secondary Hawpol :",
+                style: AppTextStyle.boldTitle18
+                    .copyWith(color: PaletteColors.blackAppColor),
               ),
-            ],
-          ),
-          Divider(
-            height: 20,
-            thickness: 2,
-            color: PaletteColors.blackAppColor,
-          ),
-          Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Class A Single",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: itemNameKr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Class B Single",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: itemNameAr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Class C Single",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: itemNameKr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Class D Single",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: itemNameAr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                    ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DropdownButton<String>(
+                  value: familyItemList[0],
+                  icon: Icon(Icons.arrow_downward),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: TextStyle(color: PaletteColors.darkRedColorApp),
+                  underline: Container(
+                    height: 1,
+                    color: PaletteColors.blackAppColor,
                   ),
+                  onChanged: (String newValue) {
+                    setState(() {
+                      itemFamily = newValue;
+                    });
+                  },
+                  items: familyItemList
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
               ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(20.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Class A Plural",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: itemNameKr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Class B Plural",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: itemNameAr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Class C Plural",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: itemNameKr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      TextField(
-                        decoration: InputDecoration(
-                          labelText: "Class D Plural",
-                          labelStyle:
-                              TextStyle(color: PaletteColors.blackAppColor),
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: PaletteColors.cardColorApp, width: 1.0),
-                          ),
-                        ),
-                        controller: itemNameAr,
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                    ],
+              SizedBox(
+                width: 10,
+              ),
+              Text(
+                "Brand :",
+                style: AppTextStyle.boldTitle18
+                    .copyWith(color: PaletteColors.blackAppColor),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: DropdownButton<String>(
+                  value: familyItemList[0],
+                  icon: Icon(Icons.arrow_downward),
+                  iconSize: 24,
+                  elevation: 16,
+                  style: TextStyle(color: PaletteColors.darkRedColorApp),
+                  underline: Container(
+                    height: 1,
+                    color: PaletteColors.blackAppColor,
                   ),
+                  onChanged: (String newValue) {
+                    setState(() {
+                      itemFamily = newValue;
+                    });
+                  },
+                  items: familyItemList
+                      .map<DropdownMenuItem<String>>((String value) {
+                    return DropdownMenuItem<String>(
+                      value: value,
+                      child: Text(value),
+                    );
+                  }).toList(),
                 ),
               ),
             ],
           ),
-          SizedBox(
-            height: 10,
-          ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                RoundedButton(
-                    title: "Save", isThikHeight: true, onPressed: () {}),
-                SizedBox(
-                  width: 20,
-                ),
-                RoundedButton(
-                    title: "Save Family Item Info",
-                    isThikHeight: true,
-                    onPressed: () {}),
-              ],
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Row(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "${selectedDate.toLocal()}".split(' ')[0],
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
+            SizedBox(
+              width: 20.0,
+            ),
+            RaisedButton(
+              onPressed: () => _selectDate(context), // Refer step 3
+              child: Text(
+                'Select date',
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+              ),
+              color: Colors.greenAccent,
+            ),
+          ],
+        ),
+        Divider(
+          height: 20,
+          thickness: 2,
+          color: PaletteColors.blackAppColor,
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Class A Single",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
+                        ),
+                      ),
+                      controller: itemNameKr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Class B Single",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
+                        ),
+                      ),
+                      controller: itemNameAr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Class C Single",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
+                        ),
+                      ),
+                      controller: itemNameKr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Class D Single",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
+                        ),
+                      ),
+                      controller: itemNameAr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Class A Plural",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
+                        ),
+                      ),
+                      controller: itemNameKr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Class B Plural",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
+                        ),
+                      ),
+                      controller: itemNameAr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Class C Plural",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
+                        ),
+                      ),
+                      controller: itemNameKr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: "Class D Plural",
+                        labelStyle:
+                            TextStyle(color: PaletteColors.blackAppColor),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: PaletteColors.cardColorApp, width: 1.0),
+                        ),
+                      ),
+                      controller: itemNameAr,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              RoundedButton(
+                  title: "Save", isThikHeight: true, onPressed: () {}),
+              SizedBox(
+                width: 20,
+              ),
+              RoundedButton(
+                  title: "Save Family Item Info",
+                  isThikHeight: true,
+                  onPressed: () {}),
+            ],
           ),
-          Divider(
-            height: 10,
-            thickness: 2,
-            color: PaletteColors.blackAppColor,
-          ),
-          SizedBox(
-            height: 100,
-          )
-        ],
-      ),
+        ),
+        Divider(
+          height: 10,
+          thickness: 2,
+          color: PaletteColors.blackAppColor,
+        ),
+        SizedBox(
+          height: 100,
+        )
+      ],
     );
   }
 

@@ -94,7 +94,7 @@ class _LoginState extends State<Login> {
                 height: MediaQuery.of(context).size.height / 1.5,
                 child: Column(
                   children: <Widget>[
-                    SizedBox(height: 62.0),
+                    //SizedBox(height: 62.0),
                     Center(
                         child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
